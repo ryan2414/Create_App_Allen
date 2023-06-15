@@ -2,7 +2,10 @@
 인강 링크 : https://inf.run/MBJT
 
 
-##RockPaperScissors
+## UpDownGame
+<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/0092048a-b488-4034-b5a4-f05e792c3c21">
+
+## RockPaperScissors
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/f9543b8e-2b96-4c72-b8b1-09ef67e737ed)">
 
 ## DiceGame
