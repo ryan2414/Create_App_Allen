@@ -38,21 +38,41 @@ class ViewController: UIViewController {
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
         timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] _ in
-            if number > 0 {
-                number -= 1
-                slider.value = Float(number)/Float(60)
-                mainLabel.text = "\(number) 초"
-            } else {
-                number = 0
-                mainLabel.text = "초를 선택하세요"
-                
-                timer?.invalidate()
-                
-                AudioServicesPlayAlertSound(SystemSoundID(1322))
-            }
-           
-        })
+        
+        //셀렉터 사용
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(doSomethingAfter1Second), userInfo: nil, repeats: true)
+       
+        //클로저 사용
+//        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] _ in
+//            if number > 0 {
+//                number -= 1
+//                slider.value = Float(number)/Float(60)
+//                mainLabel.text = "\(number) 초"
+//            } else {
+//                number = 0
+//                mainLabel.text = "초를 선택하세요"
+//
+//                timer?.invalidate()
+//
+//                AudioServicesPlayAlertSound(SystemSoundID(1322))
+//            }
+//
+//        })
+    }
+    
+    @objc func doSomethingAfter1Second() {
+        if number > 0 {
+            number -= 1
+            slider.value = Float(number)/Float(60)
+            mainLabel.text = "\(number) 초"
+        } else {
+            number = 0
+            mainLabel.text = "초를 선택하세요"
+            
+            timer?.invalidate()
+            
+            AudioServicesPlayAlertSound(SystemSoundID(1322))
+        }
     }
     
     
