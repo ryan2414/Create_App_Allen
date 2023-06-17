@@ -1,7 +1,33 @@
 # 앨런 Swift문법 마스터 스쿨 (15개의 앱을 만들면서 근본원리부터 배우는 UIKit)
 인강 링크 : https://inf.run/MBJT
 
-### TextField
+## Login Project
+- 스크립트만으로 UI 만들기
+- Alert 창 만들기
+```
+let alert = UIAlertController(title: "비밀번호 바꾸기", message: "비밀번호를 바꾸시겠습니까?", preferredStyle: .alert)
+
+let success = UIAlertAction(title: "확인", style: .default) { action in
+    print("확인 버튼이 눌렸습니다.")
+}
+let cancel = UIAlertAction(title: "취소", style: .cancel) { cancel in
+    print("취소 버튼이 눌렸습니다.")
+}
+
+alert.addAction(success)
+alert.addAction(cancel)
+
+present(alert, animated: true, completion: nil)
+```
+- UI 애니메이션 할당
+```
+UIView.animate(withDuration: 0.3) {
+    self.stackView.layoutIfNeeded()
+}
+```
+<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/9dbd32b0-7d36-4e8e-9dee-6f7017651850" width="25%" height="25%">
+
+## TextField
 - textField 관련 속성 써보기 
 ```Swift
 textField.keyboardType = UIKeyboardType.emailAddress
