@@ -4,7 +4,7 @@
 ## Login Project
 - 스크립트만으로 UI 만들기
 - Alert 창 만들기
-```
+```Swift
 let alert = UIAlertController(title: "비밀번호 바꾸기", message: "비밀번호를 바꾸시겠습니까?", preferredStyle: .alert)
 
 let success = UIAlertAction(title: "확인", style: .default) { action in
@@ -20,7 +20,7 @@ alert.addAction(cancel)
 present(alert, animated: true, completion: nil)
 ```
 - UI 애니메이션 할당
-```
+```Swift
 UIView.animate(withDuration: 0.3) {
     self.stackView.layoutIfNeeded()
 }
