@@ -1,6 +1,33 @@
 # 앨런 Swift문법 마스터 스쿨 (15개의 앱을 만들면서 근본원리부터 배우는 UIKit)
 인강 링크 : https://inf.run/MBJT
 
+### TextField
+- textField 관련 속성 써보기 
+```Swift
+textField.keyboardType = UIKeyboardType.emailAddress
+textField.placeholder = "이메일 입력"
+textField.borderStyle = .roundedRect
+textField.clearButtonMode = .always
+textField.returnKeyType = .go
+```
+- textField 글자 수 제한 방법
+```Swift
+// 텍스트필드 글자 내용이 (한글자 한글자) 입력되거나 지워질때 호출이 되고 (허락)
+func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    let maxLength = 10
+    let currentString: NSString = (textField.text ?? "") as NSString
+    let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
+    return newString.length <= maxLength
+}
+```
+- textField 이외의 영역 터치시 키보드 내리기
+```Swift
+// 화면의 탭을 감지하는 메서드
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.endEditing(true)
+}
+```
+
 ## Timer
 - 타이머 구현하기/ 셀렉터 & 클로저 사용
 ```
