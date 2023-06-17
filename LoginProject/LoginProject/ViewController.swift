@@ -9,7 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let emailTextFieldView = UIView()
+    let emailTextFieldView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.darkGray
+        view.layer.cornerRadius = 8
+        view.layer.masksToBounds = true
+        return view
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +24,6 @@ class ViewController: UIViewController {
     }
 
     func makeUI() {
-        emailTextFieldView.backgroundColor = UIColor.darkGray
-        
-        emailTextFieldView.layer.cornerRadius = 8
-        emailTextFieldView.layer.masksToBounds = true
-        
         view.addSubview(emailTextFieldView)
         
         emailTextFieldView.translatesAutoresizingMaskIntoConstraints = false
