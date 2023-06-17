@@ -132,4 +132,5 @@ AudioServicesPlayAlertSound(SystemSoundID(1322))
 
 ## MyFirstApp
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/060e28c4-917b-47d8-97ce-d287937fb92b" width="25%" height="25%">   
+
 - 단순 버튼을 누르면 텍스트 바꾸기
