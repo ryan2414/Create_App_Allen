@@ -59,6 +59,7 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
 ## Timer
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/710665fe-a4f4-483c-980a-b8fd184136d7" width="25%" height="25%">   
+
 - 타이머 구현하기/ 셀렉터 & 클로저 사용
 ```
 weak var timer: Timer? // 강한 레퍼런스 사이클을 조심해야 한다.
@@ -112,17 +113,20 @@ AudioServicesPlayAlertSound(SystemSoundID(1322))
 
 ## UpDownGame
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/0092048a-b488-4034-b5a4-f05e792c3c21" width="25%" height="25%">   
+
 - 업다운 게임
 - String을 Int로 형변환
 - guard let num = Int(string값) 사용
 
 ## RockPaperScissors
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/f9543b8e-2b96-4c72-b8b1-09ef67e737ed)" width="25%" height="25%">   
+
 - 가위바위보 게임
 
 
 ## DiceGame
 <img src ="https://github.com/ryan2414/Create_App_Allen/assets/75060346/2136f482-61f7-47ba-bd43-36de0b1917bb" width="25%" height="25%">   
+
 - 버튼을 누르면 랜덤으로 다이스 이미지 바꾸기
 
 
