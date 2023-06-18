@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,15 +41,25 @@ class ViewController: UIViewController {
     
     // 3) 스토리보드에서의 화면 이동(간접 세그웨이)
     @IBAction func storyboardWithSegueButtonTapped(_ sender: UIButton) {
-        
-
-        
-        
-        
-        
+        performSegue(withIdentifier: "toThirdVC", sender: self)
     }
     
-
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toThirdVC" {
+            let thirdVC = segue.destination as! ThirdViewController
+            thirdVC.someString = "엄마상어"
+        }
+        
+        if segue.identifier == "toFourthVC" {
+            let fourthVC = segue.destination as! FourthViewController
+            fourthVC.someString = "뚜루루뚜루"
+        }
+    }
+    
+    // 4) 직접적인 segue를 버튼하고 연결했을 때 실행됨. -> 다음화면으로 넘어가기 위한 조건 설정
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return true
+    }
 }
 
