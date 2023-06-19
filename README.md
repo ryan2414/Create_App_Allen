@@ -2,7 +2,7 @@
 인강 링크 : https://inf.run/MBJT
 
 ## BMI 계산기
-img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/411425d3-a7f5-461e-8e01-6bb5dca9b61a" width="25%" height="25%">   
+<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/411425d3-a7f5-461e-8e01-6bb5dca9b61a" width="25%" height="25%">   
 
 ## View 전환
 1. 코드로 화면 전환
