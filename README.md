@@ -1,6 +1,61 @@
 # 앨런 Swift문법 마스터 스쿨 (15개의 앱을 만들면서 근본원리부터 배우는 UIKit)
 인강 링크 : https://inf.run/MBJT
 
+## View 전환
+1. 코드로 화면 전환
+    
+    ```swift
+    //////////////////////////특정 화면으로 이동/////////////////////////
+    let firstVC = FirstViewController()
+    
+    firstVC.someString = "Hello"
+    firstVC.modalPresentationStyle = .fullScreen //전체화면으로 전환
+    
+    present(firstVC, animated: true)
+    
+    ///////////////////////////돌아가기(공통)///////////////////////////
+    dismiss(animated: true)//이전화면으로 돌아가기
+    ```
+    
+2. 코드로 스토리보드 객체를 생성해서, 화면 전환
+    
+    ```swift
+    // 2) 코드로 스토리보드 객체를 생성해서, 화면 이동
+    @IBAction func storyboardWithCodeButtonTapped(_ sender: UIButton) {
+        if let secondVC = storyboard?.instantiateViewController(withIdentifier: "secondVC") as? SecondViewController {
+            secondVC.someString = "아빠상어" // 인자 전달
+            present(secondVC, animated: true)
+        }
+    }
+    ```
+    
+3. 스토리보드에서 화면 이동(간접 세그웨이)
+    
+    ```swift
+    // 3) 스토리보드에서의 화면 이동(간접 세그웨이) - 버튼을 눌렀을 때
+    @IBAction func storyboardWithSegueButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "toThirdVC", sender: self)
+    }
+    
+    // 인자 전달 방법
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toThirdVC" {
+            let thirdVC = segue.destination as! ThirdViewController
+            thirdVC.someString = "엄마상어"
+        }
+    }
+    ```
+    
+4. 스토리보드 버튼에서 화면 이동(직접 세그웨이)
+    
+    ```swift
+    // 4) 직접적인 segue를 버튼하고 연결했을 때 실행됨. -> 다음화면으로 넘어가기 위한 조건 설정
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return true
+    }
+    ```
+    
+    
 ## Login Project
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/9dbd32b0-7d36-4e8e-9dee-6f7017651850" width="25%" height="25%">   
 
