@@ -38,13 +38,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateButtonTapped(_ sender: UIButton) {
-        
-        guard let height = heightTextField.text,
-              let weight = weightTextField.text else { return }
-        
-        bmiManaer.calculateBMI(height: height, weight: weight)
-        
-        
+        print(#function)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -62,10 +56,10 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSecondVC" {
             let secondVC = segue.destination as! SecondViewController
-         
-            secondVC.bmiNumber = bmiManaer.getBMIResult()
-            secondVC.bmiColor = bmiManaer.getBackgroundColor()
-            secondVC.adviceString = bmiManaer.getBMIAdviceString()
+            secondVC.bmi = bmiManaer.getBMI(height: heightTextField.text!, weight: weightTextField.text!)
+//            secondVC.bmiNumber = bmiManaer.getBMIResult()
+//            secondVC.bmiColor = bmiManaer.getBackgroundColor()
+//            secondVC.adviceString = bmiManaer.getBMIAdviceString()
         }
         
         heightTextField.text = ""
