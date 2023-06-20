@@ -14,6 +14,7 @@
 		902DCA4B2A3AD2790014AD3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 902DCA4A2A3AD2790014AD3E /* Assets.xcassets */; };
 		902DCA4E2A3AD2790014AD3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 902DCA4C2A3AD2790014AD3E /* LaunchScreen.storyboard */; };
 		902DCA562A3AE0AB0014AD3E /* Rps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DCA552A3AE0AB0014AD3E /* Rps.swift */; };
+		907A21212A4123720040B0F1 /* RPSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907A21202A4123720040B0F1 /* RPSManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		902DCA4D2A3AD2790014AD3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		902DCA4F2A3AD2790014AD3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		902DCA552A3AE0AB0014AD3E /* Rps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rps.swift; sourceTree = "<group>"; };
+		907A21202A4123720040B0F1 /* RPSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		902DCA402A3AD2790014AD3E /* RPSGame2 */ = {
 			isa = PBXGroup;
 			children = (
+				907A211F2A4123530040B0F1 /* Controllers */,
+				907A211E2A41234F0040B0F1 /* Views */,
+				907A211D2A4123470040B0F1 /* Models */,
 				902DCA412A3AD2790014AD3E /* AppDelegate.swift */,
 				902DCA432A3AD2790014AD3E /* SceneDelegate.swift */,
-				902DCA452A3AD2790014AD3E /* ViewController.swift */,
-				902DCA552A3AE0AB0014AD3E /* Rps.swift */,
-				902DCA472A3AD2790014AD3E /* Main.storyboard */,
 				902DCA4A2A3AD2790014AD3E /* Assets.xcassets */,
 				902DCA4C2A3AD2790014AD3E /* LaunchScreen.storyboard */,
 				902DCA4F2A3AD2790014AD3E /* Info.plist */,
 			);
 			path = RPSGame2;
+			sourceTree = "<group>";
+		};
+		907A211D2A4123470040B0F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				902DCA552A3AE0AB0014AD3E /* Rps.swift */,
+				907A21202A4123720040B0F1 /* RPSManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		907A211E2A41234F0040B0F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				902DCA472A3AD2790014AD3E /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		907A211F2A4123530040B0F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				902DCA452A3AD2790014AD3E /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +172,7 @@
 				902DCA562A3AE0AB0014AD3E /* Rps.swift in Sources */,
 				902DCA422A3AD2790014AD3E /* AppDelegate.swift in Sources */,
 				902DCA442A3AD2790014AD3E /* SceneDelegate.swift in Sources */,
+				907A21212A4123720040B0F1 /* RPSManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,8 +12,8 @@ import UIKit
 //규모가 커질 경우 class로 변경 
 struct BMICalculatorManaer {
     
-    var bmi: BMI?
-    var defaultBMI: BMI = BMI(value: 0.0, matchColor: UIColor.black, advice: "문제발생")
+    private var bmi: BMI?
+    private var defaultBMI: BMI = BMI(value: 0.0, matchColor: UIColor.black, advice: "문제발생")
     
     mutating func getBMI(height: String, weight: String) -> BMI {
         calculateBMI(height: height, weight: weight)

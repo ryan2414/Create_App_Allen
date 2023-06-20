@@ -12,46 +12,40 @@ class ViewController: UIViewController {
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var numberLabel: UILabel!
     
-    var comNum = Int.random(in: 1...10)
+    var upDownManager = UpDownManager()
     
-    //var myNum = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        reset()
+    }
+    
+    func reset() {
         mainLabel.text = "선택하세요"
         numberLabel.text = ""
+        upDownManager.resetNum()
     }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         guard let numString = sender.currentTitle else { return }
-        
         numberLabel.text = numString
         
-//        guard let num = Int(numString) else { return }
-//
-//        myNum = num
+        guard let num = Int(numString) else { return }
+        upDownManager.setUserNum(num: num)
     }
     
     @IBAction func selectButtonTapped(_ sender: UIButton) {
-        guard let numString = numberLabel.text else { return }
-        guard let myNum = Int(numString) else { return }
-        
-        if comNum > myNum {
-            mainLabel.text = "UP"
-        } else if comNum < myNum {
-            mainLabel.text = "DOWN"
-        } else {
-            mainLabel.text = "BINGO😂"
+        guard let numString = numberLabel.text, let myNum = Int(numString) else {
+            return
         }
         
-        
+        upDownManager.setUserNum(num: myNum)
+        mainLabel.text = upDownManager.getUpDownResult()
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
-        mainLabel.text = "선택하세요"
-        numberLabel.text = ""
-        comNum = Int.random(in: 1...10)
+        reset()
     }
     
 }

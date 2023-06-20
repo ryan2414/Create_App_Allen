@@ -13,6 +13,7 @@
 		902CC96A2A3ACB7900E0681E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 902CC9682A3ACB7900E0681E /* Main.storyboard */; };
 		902CC96C2A3ACB7900E0681E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 902CC96B2A3ACB7900E0681E /* Assets.xcassets */; };
 		902CC96F2A3ACB7900E0681E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 902CC96D2A3ACB7900E0681E /* LaunchScreen.storyboard */; };
+		907A211C2A4122450040B0F1 /* DiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907A211B2A4122450040B0F1 /* DiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		902CC96B2A3ACB7900E0681E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		902CC96E2A3ACB7900E0681E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		902CC9702A3ACB7900E0681E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		907A211B2A4122450040B0F1 /* DiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		902CC9612A3ACB7900E0681E /* DiceGame2 */ = {
 			isa = PBXGroup;
 			children = (
+				907A211A2A4122210040B0F1 /* Controllers */,
+				907A21192A4122170040B0F1 /* Views */,
+				907A21182A41220E0040B0F1 /* Models */,
 				902CC9622A3ACB7900E0681E /* AppDelegate.swift */,
 				902CC9642A3ACB7900E0681E /* SceneDelegate.swift */,
-				902CC9662A3ACB7900E0681E /* ViewController.swift */,
-				902CC9682A3ACB7900E0681E /* Main.storyboard */,
 				902CC96B2A3ACB7900E0681E /* Assets.xcassets */,
 				902CC96D2A3ACB7900E0681E /* LaunchScreen.storyboard */,
 				902CC9702A3ACB7900E0681E /* Info.plist */,
 			);
 			path = DiceGame2;
+			sourceTree = "<group>";
+		};
+		907A21182A41220E0040B0F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				907A211B2A4122450040B0F1 /* DiceManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		907A21192A4122170040B0F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				902CC9682A3ACB7900E0681E /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		907A211A2A4122210040B0F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				902CC9662A3ACB7900E0681E /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				907A211C2A4122450040B0F1 /* DiceManager.swift in Sources */,
 				902CC9672A3ACB7900E0681E /* ViewController.swift in Sources */,
 				902CC9632A3ACB7900E0681E /* AppDelegate.swift in Sources */,
 				902CC9652A3ACB7900E0681E /* SceneDelegate.swift in Sources */,
