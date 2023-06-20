@@ -4,6 +4,12 @@
 ## BMI 계산기
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/411425d3-a7f5-461e-8e01-6bb5dca9b61a" width="25%" height="25%">   
 
+## MVC(Model-View-Controller) 디자인 패턴
+- Model - 비즈니스 로직, 데이터 (화면과 전혀 관련이 없는 로직과 데이터 관련)
+- View - UI관련. 즉, 사용자 화면 표시(뷰컨트롤러의 명령을 받아 화면 표시)
+- Controller - 뷰컨트롤러, 모델의 정보를 어떻게 뷰에 표시할지를 해석해서 전달(중재자)
+
+
 ## View 전환
 1. 코드로 화면 전환
     
