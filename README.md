@@ -4,6 +4,7 @@
 ## TableView
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/7ef122eb-5aed-4f4f-a2eb-255286f694cd" width="25%" height="25%">   
 
+
 - 델리게이트 패턴을 사용
 - dataSource - 테이블뷰의 구성
     1. 몇개의 셀로 만들것인지?
