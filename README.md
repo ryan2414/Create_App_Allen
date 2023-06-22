@@ -1,6 +1,11 @@
 # 앨런 Swift문법 마스터 스쿨 (15개의 앱을 만들면서 근본원리부터 배우는 UIKit)
 인강 링크 : https://inf.run/MBJT
 
+## TableView
+<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/7ef122eb-5aed-4f4f-a2eb-255286f694cd" width="25%" height="25%">   
+
+
+
 ## MVC(Model-View-Controller) 디자인 패턴
 - Model - 비즈니스 로직, 데이터 (화면과 전혀 관련이 없는 로직과 데이터 관련)
 - View - UI관련. 즉, 사용자 화면 표시(뷰컨트롤러의 명령을 받아 화면 표시)
