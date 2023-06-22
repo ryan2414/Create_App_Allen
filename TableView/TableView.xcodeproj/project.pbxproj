@@ -15,6 +15,8 @@
 		9033C3E12A42F45E0036FFBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9033C3DF2A42F45E0036FFBA /* LaunchScreen.storyboard */; };
 		9033C3E92A42F8CD0036FFBA /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033C3E82A42F8CD0036FFBA /* MovieCell.swift */; };
 		9033C3EE2A42F9DE0036FFBA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9033C3ED2A42F9DE0036FFBA /* Movie.swift */; };
+		90446B062A43D37700E4DE17 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90446B052A43D37700E4DE17 /* DataManager.swift */; };
+		90446B082A43DB2D00E4DE17 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90446B072A43DB2D00E4DE17 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		9033C3E22A42F45E0036FFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9033C3E82A42F8CD0036FFBA /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		9033C3ED2A42F9DE0036FFBA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		90446B052A43D37700E4DE17 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		90446B072A43DB2D00E4DE17 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				9033C3ED2A42F9DE0036FFBA /* Movie.swift */,
+				90446B052A43D37700E4DE17 /* DataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9033C3D82A42F45D0036FFBA /* ViewController.swift */,
+				90446B072A43DB2D00E4DE17 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,10 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9033C3D92A42F45D0036FFBA /* ViewController.swift in Sources */,
+				90446B062A43D37700E4DE17 /* DataManager.swift in Sources */,
 				9033C3D52A42F45D0036FFBA /* AppDelegate.swift in Sources */,
 				9033C3E92A42F8CD0036FFBA /* MovieCell.swift in Sources */,
 				9033C3D72A42F45D0036FFBA /* SceneDelegate.swift in Sources */,
 				9033C3EE2A42F9DE0036FFBA /* Movie.swift in Sources */,
+				90446B082A43DB2D00E4DE17 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
