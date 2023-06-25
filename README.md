@@ -1,6 +1,67 @@
 # 앨런 Swift문법 마스터 스쿨 (15개의 앱을 만들면서 근본원리부터 배우는 UIKit)
 인강 링크 : https://inf.run/MBJT
 
+## TableView
+<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/7ef122eb-5aed-4f4f-a2eb-255286f694cd" width="25%" height="25%">   
+
+
+- 델리게이트 패턴을 사용
+- dataSource - 테이블뷰의 구성
+    1. 몇개의 셀로 만들것인지?
+    2. 셀의 구성은 어떻게? 
+
+```swift
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(#function)
+        return movieDataManager.getMovieData().count //컨텐츠 생성 개수
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        print(#function)
+        //indexPath.section //그룹
+        //indexPath.row // 행
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        
+        let movie = movieDataManager.getMovieData()[indexPath.row]
+        
+        cell.mainImageView.image = movie.movieImage
+        cell.movieNameLabel.text = movie.movieName
+        cell.movieDescription.text = movie.movieDescription
+        
+        return cell
+    }
+}
+```
+
+- delegate
+    1. 터치가 일어남/ 드레그가 일어남 등
+
+```swift
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetail", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            let detailVC = segue.destination as! DetailViewController
+            
+            let array = movieDataManager.getMovieData()
+            
+            let indexPath = sender as! IndexPath
+            
+            detailVC.moiveData = array[indexPath.row]
+        }
+    }
+}
+```
+
+- tableView Data 추가시 `tableView.reloadData()` 호출
+
+
 ## MVC(Model-View-Controller) 디자인 패턴
 - Model - 비즈니스 로직, 데이터 (화면과 전혀 관련이 없는 로직과 데이터 관련)
 - View - UI관련. 즉, 사용자 화면 표시(뷰컨트롤러의 명령을 받아 화면 표시)
