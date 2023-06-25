@@ -2,19 +2,17 @@
 인강 링크 : https://inf.run/MBJT
 
 ## MemberList
-<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/95265c72-13db-4764-b190-ed9b7b30d8bc">
+<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/95265c72-13db-4764-b190-ed9b7b30d8bc" width="25%" height="25%">
 
 - Study Custom Delegate Pattern
 - Delegate Pattern & Notification
-  - 델리게이트 패턴  
-    1:1 객체간 쌍방향 커뮤니케이션에 사용 한다. 
-    리턴값 있을 수 있음 
-    
-- Notification
-    1:N 라디오 방송의 개념
-    등록하면 Nofi를 받을 수 있음 
-    리턴값의 개념이 없음
-
+    - 델리게이트 패턴  
+        - 1:1 객체간 쌍방향 커뮤니케이션에 사용 한다. 
+        - 리턴값 있을 수 있음 
+    - Notification
+        - 1:N 라디오 방송의 개념
+        - 등록하면 Nofi를 받을 수 있음 
+        - 리턴값의 개념이 없음
 
 
 ## TableView
