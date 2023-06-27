@@ -2,7 +2,7 @@
 인강 링크 : https://inf.run/MBJT
 
 ## Music App
-<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/95265c72-13db-4764-b190-ed9b7b30d8bc" width="25%" height="25%">
+<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/a5576383-b00b-4959-9010-ae97d6f404b9" width="25%" height="25%">
 
 - Network 관련 작업
 - itunes search api 연결 작업
