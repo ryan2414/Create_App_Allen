@@ -19,3 +19,9 @@ public struct Cell {
     static let musicCollectionViewCellIdentifier = "MusicCollectionViewCell"
     private init() {}//인스턴스 못하게 막음
 }
+
+public struct CVCell {
+    static let spacingWidth: CGFloat = 1
+    static let cellColumns: CGFloat = 3
+    private init() {}
+}

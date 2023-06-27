@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let searchController = UISearchController()
+    //let searchController = UISearchController()
+    
+    let searchController = UISearchController(searchResultsController: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchResultViewController") as! SearchResultViewController)
     
     @IBOutlet weak var musicTableView: UITableView!
     
@@ -29,7 +31,11 @@ class ViewController: UIViewController {
     func setUpSearchBar() {
         self.title = "Music Search"
         navigationItem.searchController = searchController
-        searchController.searchBar.delegate = self
+        
+        //searchController.searchBar.delegate = self
+        
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.autocapitalizationType = .none
         
     }
 
@@ -87,26 +93,26 @@ extension ViewController: UITableViewDelegate {
         return 120
     }
 }
-
-extension ViewController: UISearchBarDelegate {
-    //유저가 글자를 입력하는 순간마다 호출되는 메서드
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-        self.musicArrays = []
-
-        networkManager.fetchMusic(searchTerm: searchText) { result in
-            switch result {
-            case .success(let musicDatas):
-                self.musicArrays = musicDatas
-                DispatchQueue.main.async {
-                    self.musicTableView.reloadData()
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
-    
+//
+//extension ViewController: UISearchBarDelegate {
+//    //유저가 글자를 입력하는 순간마다 호출되는 메서드
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        print(searchText)
+//        self.musicArrays = []
+//
+//        networkManager.fetchMusic(searchTerm: searchText) { result in
+//            switch result {
+//            case .success(let musicDatas):
+//                self.musicArrays = musicDatas
+//                DispatchQueue.main.async {
+//                    self.musicTableView.reloadData()
+//                }
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
+//
     // 검색(Search) 버튼을 눌렀을 때 호출 되는 메서드
 //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 //        guard let text = searchController.searchBar.text else {
@@ -131,4 +137,13 @@ extension ViewController: UISearchBarDelegate {
 //
 //        self.view.endEditing(true)
 //    }
+//}
+
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        print("서치바에 입력되는 단어", searchController.searchBar.text ?? "")
+        
+        let vc = searchController.searchResultsController as! SearchResultViewController
+        vc.searchTerm = searchController.searchBar.text ?? ""
+    }
 }
