@@ -5,7 +5,8 @@
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/a5576383-b00b-4959-9010-ae97d6f404b9" width="25%" height="25%">
 
 - Network 관련 작업
-- itunes search api 연결 작업
+    - itunes search api 연결 작업
+    - 서버에서 받아온 이미지 비동기 처리 
 - postman을 활용한 api 체크 진행
 - searchBar 적용
 - 검색시 collectionView에 엘범 이미지 보이도록 적용
