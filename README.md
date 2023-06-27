@@ -1,6 +1,15 @@
 # 앨런 Swift문법 마스터 스쿨 (15개의 앱을 만들면서 근본원리부터 배우는 UIKit)
 인강 링크 : https://inf.run/MBJT
 
+## Music App
+<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/95265c72-13db-4764-b190-ed9b7b30d8bc" width="25%" height="25%">
+
+- Network 관련 작업
+- itunes search api 연결 작업
+- postman을 활용한 api 체크 진행
+- searchBar 적용
+- 검색시 collectionView에 엘범 이미지 보이도록 적용
+
 ## MemberList
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/95265c72-13db-4764-b190-ed9b7b30d8bc" width="25%" height="25%">
 
