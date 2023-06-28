@@ -3,6 +3,7 @@
 
 ## ToDoList App
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/9e6cfbb5-9e15-4df1-a453-645dcb998c12" width="25%" height="25%">
+
 - core data 사용해보기 
 
 
