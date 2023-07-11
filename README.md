@@ -1,6 +1,13 @@
 # 앨런 Swift문법 마스터 스쿨 (15개의 앱을 만들면서 근본원리부터 배우는 UIKit)
 인강 링크 : https://inf.run/MBJT
 
+## ToDoList App
+<img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/9e6cfbb5-9e15-4df1-a453-645dcb998c12" width="25%" height="25%">
+
+- core data 사용해보기 
+
+
+
 ## Music App
 <img src="https://github.com/ryan2414/Create_App_Allen/assets/75060346/a5576383-b00b-4959-9010-ae97d6f404b9" width="25%" height="25%">
 
